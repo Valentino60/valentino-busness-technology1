@@ -4,10 +4,10 @@ Responsive website and Express backend for Valentino Business Technology in Nair
 
 ## Project files
 
-The frontend is first because it is the customer-facing website. The backend serves it and handles contact messages and admin access.
+The frontend is first because it is the customer-facing website. Its `01-` prefix makes GitHub list it above `backend/`. The backend serves it and handles contact messages and admin access.
 
 ```text
-frontend/
+01-frontend/
 	index.html       Main website entry point (start here)
 	styles.css       Responsive website styles
 	app.js           Mobile navigation and contact form

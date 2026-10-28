@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 const port = Number(process.env.PORT) || 3000;
-const frontendPath = path.join(__dirname, '..', 'frontend');
+const frontendPath = path.join(__dirname, '..', '01-frontend');
 const messagesPath = path.join(__dirname, 'data', 'messages.json');
 
 app.disable('x-powered-by');
