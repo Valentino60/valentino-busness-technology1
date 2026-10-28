@@ -8,7 +8,7 @@ The frontend is first because it is the customer-facing website. The backend ser
 
 ```text
 frontend/
-	index.html       Main website
+	index.html       Main website entry point (start here)
 	styles.css       Responsive website styles
 	app.js           Mobile navigation and contact form
 	admin.html       Protected enquiry inbox page
@@ -17,6 +17,7 @@ frontend/
 backend/
 	package.json     Express dependencies and run scripts
 	server.js        Website server, contact API and admin API
+	.env.example     Admin settings template
 ```
 
 ## Run locally
@@ -31,22 +32,20 @@ Requirements: Node.js 20 or newer and npm.
 	npm install
 	```
 
-3. Set a local admin login without writing the password into a file:
+3. Create a local environment file and set a private admin password:
 
 	```sh
-	read -rsp "Admin password: " ADMIN_PASSWORD
-	echo
-	export ADMIN_PASSWORD
-	export ADMIN_USER=admin
+	cp .env.example .env
 	```
 
-4. Start the website and API:
+4. Edit `backend/.env` and replace the example `ADMIN_PASSWORD` value.
+5. Start the website and API:
 
 	```sh
 	npm start
 	```
 
-5. Visit `http://localhost:3000`. The admin inbox is at `http://localhost:3000/admin` and uses the username `admin` with the password you entered.
+6. Visit `http://localhost:3000`. The admin inbox is at `http://localhost:3000/admin` and uses the username and password from `backend/.env`.
 
 Run the development server with automatic restarts using `npm run dev` from the `backend` folder.
 
